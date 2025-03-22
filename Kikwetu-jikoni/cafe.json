@@ -1,0 +1,69 @@
+{
+    "cafeStructure": {
+      "name": "Mama Njeri's Kitchen",
+      "logo": "https://via.placeholder.com/120x60/333/d97706?text=MAMA+NJERI",
+      "heroImage": "https://i.imgur.com/Xh4enez.jpg",
+      "description": "Traditional Kenyan Cuisine",
+      "longDescription": "Mama Njeri's Kitchen is dedicated to preserving authentic Kenyan flavors using traditional cooking methods — handmade chapatis, hearty stews, and more. Our dishes are prepared with locally-sourced ingredients, cooked fresh daily in our kitchen.",
+      "location": "Nairobi, Kenya",
+      "phone": "+254 712 345 678",
+      "address": "36 Kimathi Street, Nairobi, Kenya",
+      "featuredItem": {
+        "name": "Nyama Choma Platter",
+        "price": "KSh 850"
+      },
+      "sections": [
+        {
+          "title": "CUSTOMER FAVOURITES",
+          "subtitle": "All orders for Tuesday to be made by Sunday",
+          "type": "menu-grid"
+        }
+      ],
+      "filters": [
+        {
+          "name": "All",
+          "value": "all"
+        },
+        {
+          "name": "Daily items",
+          "value": "daily"
+        },
+        {
+          "name": "Pastry",
+          "value": "pastry"
+        }
+      ],
+      "layout": {
+        "header": {
+          "type": "secondary-nav",
+          "elements": ["phone", "nav-links", "cart"]
+        },
+        "hero": {
+          "type": "split",
+          "elements": ["logo", "title", "description", "cta", "location", "featured-image"]
+        },
+        "content": {
+          "type": "menu-grid",
+          "elements": ["section-header", "menu-items", "view-all"]
+        },
+        "footer": {
+          "type": "copyright",
+          "elements": ["copyright-text", "social-links", "address"]
+        }
+      },
+      "socialLinks": [
+        {
+          "platform": "facebook",
+          "url": "https://facebook.com/mamanjeri"
+        },
+        {
+          "platform": "instagram",
+          "url": "https://instagram.com/mamanjeri"
+        },
+        {
+          "platform": "twitter",
+          "url": "https://twitter.com/mamanjeri"
+        }
+      ]
+    }
+  }

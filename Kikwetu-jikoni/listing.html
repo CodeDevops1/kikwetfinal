@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kikwetu - Discover Local Cafes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="listing.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="landing.html" class="logo">KIKWETU</a>
+            <div class="nav-links">
+                <a href="landing.html" class="nav-link active">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+            <div class="user-actions">
+                <div class="search-toggle tooltip">
+                    <i class="fas fa-search"></i>
+                    <span class="tooltip-text">Search</span>
+                </div>
+                <div class="user-icon tooltip">
+                    <i class="fas fa-user"></i>
+                    <span class="tooltip-text">Account</span>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="listing.html" class="logo">KIKWETU</a>
+                <div class="close-menu">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="mobile-menu-links">
+                <a href="listing.html" class="mobile-link active">Home</a>
+                <a href="#" class="mobile-link">About</a>
+                <a href="#" class="mobile-link">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Hero section -->
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Discover Local Cafes & Kibandas</h1>
+                <p>Find the best local eateries with authentic flavors and experiences</p>
+                <div class="search-bar-main">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for cafes, kibandas, or dishes..." id="main-search">
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search and filters -->
+        <div class="search-filters">
+            <div class="filter-buttons">
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="top-rated">Top Rated</button>
+                <button class="filter-button" data-filter="affordable">Affordable</button>
+                <button class="filter-button" data-filter="traditional">Traditional</button>
+                <button class="filter-button" data-filter="modern">Modern</button>
+            </div>
+            <div class="view-toggle">
+                <span class="view-option active tooltip" data-view="grid">
+                    <i class="fas fa-th"></i>
+                    <span class="tooltip-text">Grid View</span>
+                </span>
+                <span class="view-option tooltip" data-view="list">
+                    <i class="fas fa-list"></i>
+                    <span class="tooltip-text">List View</span>
+                </span>
+            </div>
+        </div>
+        
+        <!-- Featured cafe -->
+        <div class="featured-cafe" id="featured-cafe">
+            <div class="featured-content">
+                <div class="featured-badge">Featured</div>
+                <h2>Mama Njeri's Kitchen</h2>
+                <div class="featured-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>4.8 (230 reviews)</span>
+                </div>
+                <p>Experience authentic Kenyan cuisine with traditional cooking methods — handmade chapatis, hearty stews, and more.</p>
+                <div class="featured-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Nairobi, Kenya</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Open: 8AM - 10PM</span>
+                    </div>
+                </div>
+                <a href="cafe.html?id=1" class="btn btn-primary">View Menu</a>
+            </div>
+            <div class="featured-image">
+                <img src="https://i.imgur.com/Xh4enez.jpg" alt="Mama Njeri's Kitchen">
+            </div>
+        </div>
+        
+        <!-- Cafes section -->
+        <section class="cafes-section">
+            <div class="section-header">
+                <h2>Popular Cafes & Kibandas</h2>
+                <p>Discover the most loved local eateries</p>
+            </div>
+            
+            <div class="cafes-grid" id="cafes-grid">
+                <!-- Cafe 1: Kibanda Ya Wazee -->
+                <div class="cafe-card" data-id="2" data-tags="seafood,local,coastal" data-price="moderate" data-rating="4.6">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/ImheRee.jpg" alt="Kibanda Ya Wazee">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Kibanda Ya Wazee</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">4.6 (185)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Mombasa, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Seafood</span>
+                            <span class="cafe-tag">Local</span>
+                            <span class="cafe-tag">Coastal</span>
+                        </div>
+                        <a href="cafe.html?id=2" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 2: Urban Bites Cafe -->
+                <div class="cafe-card" data-id="3" data-tags="modern,fusion,cafe" data-price="expensive" data-rating="4.5">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/dN3ViKG.jpg" alt="Urban Bites Cafe">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Urban Bites Cafe</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">4.5 (120)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Modern</span>
+                            <span class="cafe-tag">Fusion</span>
+                            <span class="cafe-tag">Cafe</span>
+                        </div>
+                        <a href="cafe.html?id=3" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 3: Nyama Choma Palace -->
+                <div class="cafe-card" data-id="4" data-tags="bbq,meat,traditional" data-price="moderate" data-rating="4.9">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/Vj7y2nt.jpg" alt="Nyama Choma Palace">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Nyama Choma Palace</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">4.9 (310)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nakuru, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">BBQ</span>
+                            <span class="cafe-tag">Meat</span>
+                            <span class="cafe-tag">Traditional</span>
+                        </div>
+                        <a href="cafe.html?id=4" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 4: Chapati Corner -->
+                <div class="cafe-card" data-id="5" data-tags="fast-food,local,budget" data-price="affordable" data-rating="4.3">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/Tj0Vg39.jpg" alt="Chapati Corner">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Chapati Corner</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★☆</div>
+                                <span class="rating-count">4.3 (95)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Eldoret, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Fast Food</span>
+                            <span class="cafe-tag">Local</span>
+                            <span class="cafe-tag">Budget</span>
+                        </div>
+                        <a href=".html?id=5" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 5: Mandazi & Chai -->
+                <div class="cafe-card" data-id="6" data-tags="breakfast,cafe,traditional" data-price="affordable" data-rating="4.4">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/kVeRtfr.jpg" alt="Mandazi & Chai">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Mandazi & Chai</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★☆</div>
+                                <span class="rating-count">4.4 (150)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Kisumu, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Breakfast</span>
+                            <span class="cafe-tag">Cafe</span>
+                            <span class="cafe-tag">Traditional</span>
+                        </div>
+                        <a href="cafe.html?id=6" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 6: Samaki Fresh -->
+                <div class="cafe-card" data-id="7" data-tags="seafood,fresh,local" data-price="moderate" data-rating="4.7">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/ImheRee.jpg" alt="Samaki Fresh">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Samaki Fresh</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">4.7 (210)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Kisumu, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Seafood</span>
+                            <span class="cafe-tag">Fresh</span>
+                            <span class="cafe-tag">Local</span>
+                        </div>
+                        <a href="cafe.html?id=7" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 7: Kikwetu Delights -->
+                <div class="cafe-card" data-id="8" data-tags="modern,fusion,upscale" data-price="expensive" data-rating="4.5">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/Xh4enez.jpg" alt="Kikwetu Delights">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Kikwetu Delights</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">4.5 (180)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Modern</span>
+                            <span class="cafe-tag">Fusion</span>
+                            <span class="cafe-tag">Upscale</span>
+                        </div>
+                        <a href="cafe.html?id=8" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 8: Ugali House -->
+                <div class="cafe-card" data-id="9" data-tags="traditional,local,comfort-food" data-price="moderate" data-rating="4.6">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/Vj7y2nt.jpg" alt="Ugali House">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Ugali House</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">4.6 (200)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nakuru, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Traditional</span>
+                            <span class="cafe-tag">Local</span>
+                            <span class="cafe-tag">Comfort Food</span>
+                        </div>
+                        <a href="cafe.html?id=9" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 9: Mama Oliech's Fish Spot -->
+                <div class="cafe-card" data-id="10" data-tags="seafood,traditional,local" data-price="moderate" data-rating="4.8">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/ImheRee.jpg" alt="Mama Oliech's Fish Spot">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Mama Oliech's Fish Spot</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">4.8 (240)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Seafood</span>
+                            <span class="cafe-tag">Traditional</span>
+                            <span class="cafe-tag">Local</span>
+                        </div>
+                        <a href="cafe.html?id=10" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 10: Swahili Plate -->
+                <div class="cafe-card" data-id="11" data-tags="coastal,traditional,spicy" data-price="moderate" data-rating="4.7">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/Tj0Vg39.jpg" alt="Swahili Plate">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Swahili Plate</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">4.7 (195)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Mombasa, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Coastal</span>
+                            <span class="cafe-tag">Traditional</span>
+                            <span class="cafe-tag">Spicy</span>
+                        </div>
+                        <a href="cafe.html?id=11" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+                
+                <!-- Cafe 11: Chai Masala -->
+                <div class="cafe-card" data-id="10" data-tags="cafe,tea,breakfast" data-price="affordable" data-rating="4.5">
+                    <div class="cafe-image">
+                        <img src="https://i.imgur.com/kVeRtfr.jpg" alt="Chai Masala">
+                    </div>
+                    <div class="cafe-details">
+                        <div>
+                            <h3 class="cafe-name">Chai Masala</h3>
+                            <div class="cafe-rating">
+                                <div class="stars">★★★★★</div>
+                                <span class="rating-count">4.5 (160)</span>
+                            </div>
+                            <div class="cafe-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Nairobi, Kenya</span>
+                            </div>
+                        </div>
+                        <div class="cafe-tags">
+                            <span class="cafe-tag">Cafe</span>
+                            <span class="cafe-tag">Tea</span>
+                            <span class="cafe-tag">Breakfast</span>
+                        </div>
+                        <a href="cafe.html?id=12" class="btn btn-primary btn-sm">View Menu</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="load-more">
+                <button class="btn btn-secondary" id="load-more-btn">Load More</button>
+            </div>
+        </section>
+        
+        <!-- Categories section -->
+        <section class="categories-section">
+            <div class="section-header">
+                <h2>Browse by Category</h2>
+                <p>Find exactly what you're craving</p>
+            </div>
+            
+            <div class="categories-grid" id="categories-grid">
+                <div class="category-card" data-category="traditional">
+                    <div class="category-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Traditional</h3>
+                    <p>15 places</p>
+                </div>
+                
+                <div class="category-card" data-category="cafe">
+                    <div class="category-icon">
+                        <i class="fas fa-coffee"></i>
+                    </div>
+                    <h3>Cafes</h3>
+                    <p>23 places</p>
+                </div>
+                
+                <div class="category-card" data-category="fast-food">
+                    <div class="category-icon">
+                        <i class="fas fa-hamburger"></i>
+                    </div>
+                    <h3>Fast Food</h3>
+                    <p>12 places</p>
+                </div>
+                
+                <div class="category-card" data-category="seafood">
+                    <div class="category-icon">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3>Seafood</h3>
+                    <p>8 places</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- How it works section -->
+        <section class="how-it-works">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Easy steps to discover and enjoy local food</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Find</h3>
+                    <p>Discover local cafes and kibandas near you</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Choose</h3>
+                    <p>Browse menus and select your favorite dishes</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Enjoy</h3>
+                    <p>Visit the cafe or order for delivery</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest cafe openings and special offers</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" id="newsletter-email">
+                    <button class="btn btn-primary" id="newsletter-submit">Subscribe</button>
+                </div>
+                <div class="newsletter-message" id="newsletter-message"></div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="listing.html">KIKWETU</a>
+                    <p>Discover the best local cafes and kibandas</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Blog</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <a href="#">Help Center</a>
+                        <a href="#">Contact Us</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h3>Connect</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kikwetu. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="data.js"></script>
+    <script src="listing.js"></script>
+</body>
+</html>
